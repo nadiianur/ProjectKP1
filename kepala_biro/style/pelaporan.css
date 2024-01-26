@@ -1,0 +1,74 @@
+.navbar-brand {
+    color: #000;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar-nav .nav-item {
+    margin-bottom: 8px;
+}
+
+.dropdown-menu {
+    right: 0;
+    left: auto;
+    background: linear-gradient(180deg, #6CAFFF 0%, rgba(217, 217, 217, 0.00) 100%);
+}
+
+.konten {
+    color: #000;
+    font-family: 'Poppins';
+    margin-top: 1.5%;
+    margin-left: 1%;
+    font-style: normal;
+
+}
+
+.tulisan_periode {
+    color: #000;
+    font-family: 'Poppins';
+    margin-top: 5%;
+    margin-left: 36%;
+    font-style: normal;
+
+}
+
+.btn {
+    border-radius: 30px;
+    background: #EBEBEB;
+    color: #A8AFBA;
+    font-family: 'Poppins';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.periode {
+    color: #000;
+    font-family: 'Poppins';
+    margin-top: 0%;
+    font-style: normal;
+
+}
+.btn-generate{
+    border-radius: 10px;
+    background: #FFCF3A; 
+    margin-top: 1%; 
+    width: 15%;
+    text-align: center; 
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+}
