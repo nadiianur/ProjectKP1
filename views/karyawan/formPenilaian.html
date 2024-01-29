@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:700' rel='stylesheet'>
+    <title>Home</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark" style="background: linear-gradient(90deg, #61A0FF 1.5%, #B1EFCA 92.13%);;">
+        <div class="container-fluid ms-2 me-2">
+            <a href="#" class="d-flex align-items-center mt-1 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img src="../../assets/pemprovsumbar.png" width="32" height="32" class="img-fluid" alt="...">
+                <span class="fs-4"></span>
+                <h6 class="mt-1" style="margin-left: 8px; font-size: 11px; font-family: 'Open Sans Condensed';">BIRO
+                    ORGANISASI <br>
+                    <span style="font-size: 11px;">SETDA PROVINSI
+                        SUMATERA BARAT</span> </h6>
+            </a>
+            <div class="btn-group">
+                <svg class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                    xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                    viewBox="0 0 24 24" width="24px" fill="#000000">
+                    <g>
+                        <rect fill="none" height="24" width="24" />
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <path d="M20,9H4v2h16V9z M4,15h16v-2H4V15z" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <ul class="dropdown-menu dropdown-menu-end text-small shadow"
+                    style="background: linear-gradient(180deg, #6CAFFF 1.5%, #FFFFFF 92.13%); border-radius: 8%;">
+                    <li><a class="dropdown-item" href="home.html">Home</a></li>
+                    <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main" style="padding: 2%; font-family: 'Poppins';">
+        <h5 class="mt-2" style="font-weight: 800;">Form Penilaian</h5>
+        <br>
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <form>
+                <fieldset disabled>
+                    <div class="mb-3">
+                        <label for="disabledTextInpu" class="form-label fw-bold">NIP</label>
+                        <input type="text" id="nip" class="form-control" placeholder="198210182000121001">
+                    </div>
+                    <div class="mb-3">
+                        <label for="disabledTextInput" class="form-label fw-bold">Nama</label>
+                        <input type="text" id="nama" class="form-control" placeholder="Andri Pramuhardana, S.STP, M.Si">
+                    </div>
+                    <div class="mb-3">
+                        <label for="disabledTextInput" class="form-label fw-bold">Golongan</label>
+                        <input type="text" id="golongan" class="form-control" placeholder="(IV/b)">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="mt-4" style="padding: 5%;">
+            <h6 class="fw-bold" style="font-size: 17px;">Penilaian</h6>
+            <form action="">
+                <form action="">
+                    <p class="mt-4">1. Disiplin</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="disiplin" value="5">
+                        <label class="form-check-label" for="disiplin">
+                            Secara konsisten, selalu hadir tepat waktu, dengan tingkat absensi 0%
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="disiplin" value="4" checked>
+                        <label class="form-check-label" for="disiplin">
+                            Selalu hadir tepat waktu, dengan tingkat absensi < 5% </label> </div> <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="disiplin" value="3">
+                                <label class="form-check-label" for="disiplin">
+                                    Selalu hadir tetapi kadang terlambat dan sesekali absen di beberapa kondisi yang bisa
+                                    diberi
+                                    toleransi
+                                </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="disiplin" value="2">
+                        <label class="form-check-label" for="disiplin">
+                            Tingkat absensi >10% dan datang kadang terlambat
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="disiplin" value="1" checked>
+                        <label class="form-check-label" for="disiplin">
+                            Sering datang terlambat dan absen tanpa alasan yang jelas
+                        </label>
+                    </div>
+                </form>
+    
+                <form action="">
+                    <p class="mt-4">2. Tanggung Jawab</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="tanggungjawab" value="5">
+                        <label class="form-check-label" for="tanggungjawab">
+                            Selalu mengerjakan tugas yang diberikan, mengumpulkan tepat waktu, serta mengerjakan sesuai
+                            dengan
+                            instruksi yang diberikan
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="tanggungjawab" value="4"
+                            checked>
+                        <label class="form-check-label" for="tanggungjawab">
+                            Selalu mengerjakan tugas yang diberikan dengan tepat waktu meskipun sesekali melakukan kesalahan
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="tanggungjawab" value="3">
+                        <label class="form-check-label" for="tanggungjawab">
+                            Mengerjakan tugas yang diberikan terkadang terlambat dan kurang sesuai dengan instruksi yang
+                            diberikan namun masih dalam batas yang wajar
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="tanggungjawab" value="2">
+                        <label class="form-check-label" for="tanggungjawab">
+                            Tugas yang diberikan dikerjakan namun kerap kali terlambat dan banyak ditemui kesalahan
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="tanggungjawab" value="1"
+                            checked>
+                        <label class="form-check-label" for="tanggungjawab">
+                            Sering kali tidak mengerjakan tugas yang diberikan
+                        </label>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-primary mt-4 d-flex justify-content-center mx-auto"
+                                style="background: #488DF8; align-items: center; border-radius: 30px;">Submit</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

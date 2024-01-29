@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Kriteria Penilaian</title>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/admin/dashboard.css">
+</head>
+
+<body class="body">
+    <div class="grid-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-right d-flex" style="margin-left: auto;">
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                        id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../../assets/profile.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <strong>Admin</strong>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2"
+                        style="background: linear-gradient(180deg, #6CAFFF 1.5%, #FFFFFF 92.13%);">
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" style="z-index: 20;">
+            <div class="sidebar-title">
+                <span class="material-icons-outlined" onclick="closeSidebar()" style="color: #EBEBEB;">close</span>
+                <a href="#"
+                    class="d-flex align-items-center mt-3 mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <img src="../../assets/pemprovsumbar.png" width="60" height="32" class="img-fluid" alt="...">
+                    <span class="fs-4"></span>
+                    <h6 style="color: white; margin-left: 8px; font-weight: 600;">BIRO ORGANISASI <br> <span
+                            style="font-size: 12px; font-weight: 600;">SETDA PROVINSI <br>
+                            SUMATERA BARAT</span> </h6>
+                </a>
+                <hr>
+            </div>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="sidebar-list-item">
+                    <a href="dashboard.html" class="nav-link link-dark mt-3"
+                        style="letter-spacing: 0.8px; font-weight: 700;">
+                        Dashboard
+                    </a>
+                </li>
+                <li style="padding: 2%;">
+                    <a href="penilaian.html" class="nav-link dashboard mt-3" aria-current="page"
+                        style="letter-spacing: 0.8px; font-weight: 700;font-size: 14px;">
+                        Penilaian
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="karyawan.html" class="nav-link link-dark mt-3"
+                        style="letter-spacing: 0.8px; font-weight: 700;">
+                        Karyawan
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="generateKaryawan.html" class="nav-link link-dark mt-3"
+                        style="letter-spacing: 0.8px; font-weight: 700;">
+                        Generate Karyawan
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="akumulasiHasil.html" class="nav-link link-dark mt-3"
+                        style="letter-spacing: 0.8px; font-weight: 700;">
+                        Akumulasi Hasil
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="karyawanTerbaik.html" class="nav-link link-dark mt-3"
+                        style="letter-spacing: 0.8px; font-weight: 700;">
+                        Karyawan Terbaik
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main -->
+        <main class="main-container">
+            <h3 class="fw-bold">Kriteria Penilaian</h3>
+            <p>Berikut adalah data dari kriteria penilaian</p>
+
+            <!-- Modal Add Kriteria -->
+            <button type="button" class="btn d-flex mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo"
+                style="background: #408AFF; color: #FFFFFF; margin-left: auto; border-radius: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFF">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                &nbsp; Tambah Kriteria Penilaian</button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Kriteria</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Kriteria</label>
+                                    <input type="text" class="form-control"
+                                        style="background: #EBEBEB; border-radius: 30px;" id="kriteria">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Bobot</label>
+                                    <input type="text" class="form-control"
+                                        style="background: #EBEBEB; border-radius: 30px;" id="bobot">
+                                </div>
+                                <label for="message-text" class="col-form-label text-start">Sub Penilaian</label>
+                                <div class="mb-3 text-end">
+                                    <label class="mt-0 mb-0 text-end" style="font-size: 10px; margin-left: auto;">Sub
+                                        penilaian 1 (poin 5)</label>
+                                    <input type="text" class="form-control"
+                                        style="background: #EBEBEB; border-radius: 30px;" id="recipient-name">
+
+                                    <label class="mt-2 mb-0 text-end" style="margin-left: auto; font-size: 10px;">Sub
+                                        penilaian 2 (poin 4)</label>
+                                    <input type="text" class="form-control"
+                                        style="background: #EBEBEB; border-radius: 30px;" id="recipient-name">
+
+                                    <label class="mt-2 mb-0 text-end" style="margin-left: auto; font-size: 10px;">Sub
+                                        penilaian 3 (poin 3)</label>
+                                    <input type="text" class="form-control"
+                                        style="background: #EBEBEB; border-radius: 30px;" id="recipient-name">
+
+                                    <label class="mt-2 mb-0 text-end" style="margin-left: auto; font-size: 10px;">Sub
+                                        penilaian 4 (poin 2)</label>
+                                    <input type="text" class="form-control"
+                                        style="background: #EBEBEB; border-radius: 30px;" id="recipient-name">
+
+                                    <label class="mt-2 mb-0 text-end" style="margin-left: auto; font-size: 10px;">Sub
+                                        penilaian 5 (poin 1)</label>
+                                    <input type="text" class="form-control"
+                                        style="background: #EBEBEB; border-radius: 30px;" id="recipient-name">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary align-items-center w-25"
+                                style="background: #488DF8; align-items: center; border-radius: 30px;">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table mt-5 text-center  table-borderless " style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <thead>
+                    <tr style="background-color: #FFB500;">
+                        <th class="col-1">No</th>
+                        <th class="col-5">Kriteria</th>
+                        <th class="col-4">Bobot Penilaian</th>
+                        <th class="col-2">Tindakan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Disiplin</td>
+                        <td>0.1</td>
+                        <td>
+                            <button type="button" class="btn btn-warning"
+                                style="color: white;border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Edit
+                            </button>
+                            &nbsp;
+                            <button type="button" class="btn btn-danger"
+                                style="border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tanggung Jawab</td>
+                        <td>0.1</td>
+                        <td>
+                            <button type="button" class="btn btn-warning"
+                                style="color: white;border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Edit
+                            </button>
+                            &nbsp;
+                            <button type="button" class="btn btn-danger"
+                                style="border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Teamwork</td>
+                        <td>0.08</td>
+                        <td>
+                            <button type="button" class="btn btn-warning"
+                                style="color: white;border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Edit
+                            </button>
+                            &nbsp;
+                            <button type="button" class="btn btn-danger"
+                                style="border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Planning Skills</td>
+                        <td>0.08</td>
+                        <td>
+                            <button type="button" class="btn btn-warning"
+                                style="color: white;border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Edit
+                            </button>
+                            &nbsp;
+                            <button type="button" class="btn btn-danger"
+                                style="border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Leadership</td>
+                        <td>0.08</td>
+                        <td>
+                            <button type="button" class="btn btn-warning"
+                                style="color: white;border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Edit
+                            </button>
+                            &nbsp;
+                            <button type="button" class="btn btn-danger"
+                                style="border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Problem Solving and Decision Taking Skills</td>
+                        <td>0.08</td>
+                        <td>
+                            <button type="button" class="btn btn-warning"
+                                style="color: white;border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Edit
+                            </button>
+                            &nbsp;
+                            <button type="button" class="btn btn-danger"
+                                style="border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Kepatuhan</td>
+                        <td>0.08</td>
+                        <td>
+                            <button type="button" class="btn btn-warning"
+                                style="color: white;border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Edit
+                            </button>
+                            &nbsp;
+                            <button type="button" class="btn btn-danger"
+                                style="border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Kejujuran</td>
+                        <td>0.1</td>
+                        <td>
+                            <button type="button" class="btn btn-warning"
+                                style="color: white;border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Edit
+                            </button>
+                            &nbsp;
+                            <button type="button" class="btn btn-danger"
+                                style="border-radius: 30px; vertical-align: middle; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <script src="../../js/scripts.js"></script>
+
+</body>
+
+</html>
