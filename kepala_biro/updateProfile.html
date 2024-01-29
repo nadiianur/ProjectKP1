@@ -49,14 +49,14 @@
     </nav>
 
 
-
-    <div class="konten">
-        <h3 style="font-weight: 600; font-size: 30px;">Profil Saya
-        </h3>
-        <p style="font-size: 20px; ">Silahkan lakukan perubahan pada profile</p>
-    </div>
+   
+        <div class="konten">
+            <h3 style="font-weight: 600; font-size: 30px;">Profil Saya
+            </h3>
+            <p style="font-size: 20px; ">Silahkan lakukan perubahan pada profile</p>
+        </div>
     <h2 class="nameKep">Kepala Biro</h2>
-    <div class="container mt-5" style="margin-top: 0;">
+    <div class="container mt-9" style="margin-top: 0;">
         <div class="row" >
             <div class="col-md-3 d-flex justify-content-end" style="margin-right: 1%;">
                 <div class="container">
@@ -72,26 +72,26 @@
                 <form>
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="KepalaBiro">
+                        <input type="text" class="form-control" id="username" placeholder="KepalaBiro" required>
                     </div>
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="nama" placeholder="FITRIATI. M, S.Si, M.Si">
+                        <input type="text" class="form-control" id="nama" placeholder="FITRIATI. M, S.Si, M.Si" required>
                     </div>
                     <div class="mb-3">
                         <label for="nip" class="form-label">NIP</label>
-                        <input type="number" class="form-control" id="nip" placeholder="119845451156487451168764146886">
+                        <input type="number" class="form-control" id="nip" placeholder="119845451156487451168764146886" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="kepalabiro@gmail.com">
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="kepalabiro@gmail.com" required>
                     </div>
                     <div class="mb-3 row">
                         <div class="col-md-6">
                             <div class="custom-dropdown">
                                 <label for="golongan" >Golongan</label>
-                                <select class="form-control" id="golongan" name="golongan" >
-                                    <option value="" disabled selected>Pilih Golongan</option>
+                                <select class="form-select" id="golongan" name="golongan" required>
+                                    <option selected>Pilih Golongan</option>
                                     <option value="IV/c">IV/c</option>
                                     <option value="IV/b">IV/b</option>
                                     <option value="IV/a">IV/a</option>
@@ -106,9 +106,9 @@
                         <div class="col-md-6">
                             <div class="custom-dropdown">
                                 <label for="jenis_kelamin" >Jenis Kelamin</label>
-                                <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                                <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
                                     <div >
-                                        <option value="" disabled selected>Pilih jenis kelamin</option>
+                                        <option selected>Pilih jenis kelamin</option>
                                         <option value="laki-laki">Laki - Laki</option>
                                         <option value="perempuan">Perempuan</option>
                                     </div>
