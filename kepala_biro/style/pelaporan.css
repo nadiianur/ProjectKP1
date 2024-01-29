@@ -22,9 +22,9 @@
 .dropdown-menu {
     right: 0;
     left: auto;
+    
     background: linear-gradient(180deg, #6CAFFF 0%, rgba(217, 217, 217, 0.00) 100%);
 }
-
 .konten {
     color: #000;
     font-family: 'Poppins';
@@ -33,42 +33,11 @@
     font-style: normal;
 
 }
-
-.tulisan_periode {
-    color: #000;
-    font-family: 'Poppins';
+.table{
+    
     margin-top: 5%;
-    margin-left: 36%;
-    font-style: normal;
-
+    border: 1px solid #000; /* Tambahkan border luar 1px dengan warna abu-abu */
+    border-collapse: collapse; /* Atur agar border terlihat rapi */
+    width: 100%;
 }
 
-.btn {
-    border-radius: 30px;
-    background: #EBEBEB;
-    color: #A8AFBA;
-    font-family: 'Poppins';
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.periode {
-    color: #000;
-    font-family: 'Poppins';
-    margin-top: 0%;
-    font-style: normal;
-
-}
-.btn-generate{
-    border-radius: 10px;
-    background: #FFCF3A; 
-    margin-top: 1%; 
-    width: 15%;
-    text-align: center; 
-    text-decoration: none;
-    color: #000;
-    font-size: 24px;
-    font-weight: 500;
-}

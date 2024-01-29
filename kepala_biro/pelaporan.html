@@ -55,33 +55,69 @@
         <p style="font-size: 20px; ">Menyimpan data penilaian karyawan dalam bentuk laporan PDF</p>
     </div>
 
-    <h3 class="tulisan_periode " style="font-weight: 400; font-size: 25px;">Periode </h3>
-    <div class="periode d-flex flex-column justify-content-center align-items-center">
-        <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Pilih Bulan Penilaian Karyawan
-            </button>
-            <ul class="dropdown-menu">
-                <li><button class="dropdown-item" type="button">Januari</button></li>
-                <li><button class="dropdown-item" type="button">Februari</button></li>
-                <li><button class="dropdown-item" type="button">Maret</button></li>
-                <li><button class="dropdown-item" type="button">April</button></li>
-                <li><button class="dropdown-item" type="button">Mei</button></li>
-                <li><button class="dropdown-item" type="button">Juni</button></li>
-                <li><button class="dropdown-item" type="button">Juli</button></li>
-                <li><button class="dropdown-item" type="button">Agustus</button></li>
-                <li><button class="dropdown-item" type="button">September</button></li>
-                <li><button class="dropdown-item" type="button">Oktober</button></li>
-                <li><button class="dropdown-item" type="button">November</button></li>
-                <li><button class="dropdown-item" type="button">Desember</button></li>
-            </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-5 text-right">
+                <div class="btn-group d-flex">
+
+                    <select class="form-control" id="bulan" name="bulan" style="flex: 1;">
+                        <option value="" disabled selected>Pilih Bulan</option>
+                        <option value="januari">Januari</option>
+                        <option value="februari">Februari</option>
+                        <option value="maret">Maret</option>
+                        <option value="april">April</option>
+                        <option value="mei">Mei</option>
+                        <option value="juni">Juni</option>
+                        <option value="juli">Juli</option>
+                        <option value="agustus">Agustus</option>
+                        <option value="september">September</option>
+                        <option value="oktober">Oktober</option>
+                        <option value="november">November</option>
+                        <option value="desember">Desember</option>
+                    </select>
+                  <button type="button" class="btn btn-primary">
+                    <img src="image/Refresh.png" alt="Image" >
+                    Tampilkan Penilaian
+                  </button>
+                </div>
+            </div>
         </div>
-            <a class="btn-generate" href="pelaporanTabel.html" >Generate Data</a>
-        
     </div>
-
-
-
+    <div class="container col-9">
+        <table class="table" >
+            <thead style="background-color: #FFB500;">
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">NIP</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Golongan</th>
+                <th scope="col">Total Penilaian</th>
+                <th scope="col">Laporan Penilaian</th>
+                <th scope="col">Tindakan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td >1</td>
+                <td>19821018 200012 1 001</td>
+                <td>Andri Pramuhardana, S.STP, M.Si</td>
+                <td >(IV/b)</td>
+                <td>100</td>
+                <td>Laporan.pdf</td>
+                <td><button type="button" class="btn" style="background-color: #FFCF3A;">Generate Data</button></td>
+              </tr>
+              <tr>
+                <td >2</td>
+                <td>19800305 200604 2 006</td>
+                <td>Desy Herawati, S.E, Ak, M.Si</td>
+                <td >(IV/c)</td>
+                <td>50</td>
+                <td>Laporan.pdf</td>
+                <td><button type="button" class="btn" style="background-color: #FFCF3A;">Generate Data</button></td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
     <!-- Menyertakan skrip jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
