@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/kepala_biro/pelaporan.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <title>Pelaporan Kepala Biro</title>
+</head>
+
+<body>
+    <header class="p-2 mb-3 border-bottom" style="background: rgb(188,255,187);
+    background: linear-gradient(307deg, rgba(188,255,187,1) 13%, rgba(58,134,255,1) 100%); height: 9vh;">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="dashboard.html"
+                    class="navbar-brand d-flex align-items-center mt-1 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <img src="../../assets/pemprovsumbar.png" width="36" height="36" class="img-fluid" alt="...">
+                    <span class="fs-4"></span>
+                    <h5 class="mt-2"
+                        style="margin-left: 8px; font-size: 14px; font-family: 'Poppins'; font-weight: 600;">
+                        BIRO ORGANISASI SETDA PROVINSI SUMATERA BARAT</h5>
+                </a>
+                <div class="dropdown text-end">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!-- Gunakan tag img untuk menampilkan gambar profil -->
+                        <img src="../../assets/user.png" alt="User Image" width="50%" height="50%">
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="updateProfile.html">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding: 4%; margin-top: -20px;">
+        <div class="konten">
+            <h3 class="fw-bold">Pelaporan</h3>
+            <p>Menyimpan data penilaian pegawai dalam bentuk laporan PDF</p>
+        </div>
+
+        <div class="main-content" style="padding-left: 4%; padding-right: 4%;">
+            <div style="display: flex; align-items: center; flex-direction: row; margin-right: 2%;">
+                <select class="form-select d-flex mt-5 me-2" aria-label="Default select example"
+                    style="background-color: #EBEBEB; border-radius: 8px; width: 300px;  margin-left: auto;">
+                    <option selected>Pilih Bulan</option>
+                    <option value="Januari">Januari</option>
+                    <option value="Februari">Februari</option>
+                    <option value="Maret">Maret</option>
+                    <option value="April">April</option>
+                    <option value="Mei">Mei</option>
+                    <option value="Juni">Juni</option>
+                    <option value="Juli">Juli</option>
+                    <option value="Agustus">Agustus</option>
+                    <option value="September">September</option>
+                    <option value="Oktober">Oktober</option>
+                    <option value="November">November</option>
+                    <option value="Desember">Desember</option>
+                </select>
+
+                <button type="button" class="btn d-flex mt-5"
+                    style="background: #408AFF; color: #FFFFFF; border-radius: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
+                        viewBox="0,0,256,256">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(8,8)">
+                                <path
+                                    d="M16,4c-5.11328,0 -9.38281,3.16016 -11.125,7.625l1.84375,0.75c1.45703,-3.73437 4.99219,-6.375 9.28125,-6.375c3.24219,0 6.13281,1.58984 7.9375,4h-3.9375v2h7v-7h-2v3.09375c-2.19141,-2.51172 -5.42969,-4.09375 -9,-4.09375zM25.28125,19.625c-1.45703,3.73438 -4.99219,6.375 -9.28125,6.375c-3.27734,0 -6.15625,-1.61328 -7.96875,-4h3.96875v-2h-7v7h2v-3.09375c2.1875,2.48047 5.39453,4.09375 9,4.09375c5.11328,0 9.38281,-3.16016 11.125,-7.625z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    &nbsp; Tampilkan Penilaian
+                </button>
+            </div>
+
+            <table class="table table-borderless mt-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <thead style="background-color: #FFB500; text-align: center;">
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">NIP</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Golongan</th>
+                        <th scope="col">Total Penilaian</th>
+                        <th scope="col">Laporan Penilaian</th>
+                        <th scope="col">Tindakan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>19821018 200012 1 001</td>
+                        <td>Andri Pramuhardana, S.STP, M.Si</td>
+                        <td>(IV/b)</td>
+                        <td>100</td>
+                        <td>Laporan.pdf</td>
+                        <td><button type="button" class="btn" style="background-color: #FFCF3A;">Generate Data</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>19800305 200604 2 006</td>
+                        <td>Desy Herawati, S.E, Ak, M.Si</td>
+                        <td>(IV/c)</td>
+                        <td>50</td>
+                        <td>Laporan.pdf</td>
+                        <td><button type="button" class="btn" style="background-color: #FFCF3A;">Generate Data</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Menyertakan skrip jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </script>
+
+    <!-- Menyertakan skrip JavaScript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

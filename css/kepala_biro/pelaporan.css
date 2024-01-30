@@ -22,8 +22,7 @@
 .dropdown-menu {
     right: 0;
     left: auto;
-    
-    background: linear-gradient(180deg, #6CAFFF 0%, rgba(217, 217, 217, 0.00) 100%);
+    background: linear-gradient(180deg, #6CAFFF 0%, #FFFF 100%);
 }
 
 .konten {
@@ -34,11 +33,10 @@
     font-style: normal;
 
 }
-.table{
-    
+
+.table {
     margin-top: 5%;
-    border: 1px solid #000; /* Tambahkan border luar 1px dengan warna abu-abu */
-    border-collapse: collapse; /* Atur agar border terlihat rapi */
+    border-collapse: collapse;
+    /* Atur agar border terlihat rapi */
     width: 100%;
 }
-
