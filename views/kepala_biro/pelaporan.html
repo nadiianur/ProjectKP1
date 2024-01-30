@@ -52,7 +52,7 @@
 
         <div class="main-content" style="padding-left: 4%; padding-right: 4%;">
             <div style="display: flex; align-items: center; flex-direction: row; margin-right: 2%;">
-                <select class="form-select d-flex mt-5 me-2" aria-label="Default select example"
+                <select class="form-select d-flex mt-5 me-5" aria-label="Default select example"
                     style="background-color: #EBEBEB; border-radius: 8px; width: 300px;  margin-left: auto;">
                     <option selected>Pilih Bulan</option>
                     <option value="Januari">Januari</option>
@@ -71,32 +71,24 @@
 
                 <button type="button" class="btn d-flex mt-5"
                     style="background: #408AFF; color: #FFFFFF; border-radius: 8px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
-                        viewBox="0,0,256,256">
-                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                            style="mix-blend-mode: normal">
-                            <g transform="scale(8,8)">
-                                <path
-                                    d="M16,4c-5.11328,0 -9.38281,3.16016 -11.125,7.625l1.84375,0.75c1.45703,-3.73437 4.99219,-6.375 9.28125,-6.375c3.24219,0 6.13281,1.58984 7.9375,4h-3.9375v2h7v-7h-2v3.09375c-2.19141,-2.51172 -5.42969,-4.09375 -9,-4.09375zM25.28125,19.625c-1.45703,3.73438 -4.99219,6.375 -9.28125,6.375c-3.27734,0 -6.15625,-1.61328 -7.96875,-4h3.96875v-2h-7v7h2v-3.09375c2.1875,2.48047 5.39453,4.09375 9,4.09375c5.11328,0 9.38281,-3.16016 11.125,-7.625z">
-                                </path>
-                            </g>
-                        </g>
+                    <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"
+                        fill="#FFFFFF">
+                        <path d="M0 .5h24v24H0z" fill="none" />
+                        <path
+                            d="M12 16.5l4-4h-3v-9h-2v9H8l4 4zm9-13h-6v1.99h6v14.03H3V5.49h6V3.5H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2z" />
                     </svg>
-                    &nbsp; Tampilkan Penilaian
+                    &nbsp; Unduh Laporan
                 </button>
             </div>
 
-            <table class="table table-borderless mt-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                <thead style="background-color: #FFB500; text-align: center;">
+            <table class="table mt-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <thead style="background-color: #FFB500;">
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">NIP</th>
                         <th scope="col">Nama</th>
                         <th scope="col">Golongan</th>
                         <th scope="col">Total Penilaian</th>
-                        <th scope="col">Laporan Penilaian</th>
                         <th scope="col">Tindakan</th>
                     </tr>
                 </thead>
@@ -107,8 +99,124 @@
                         <td>Andri Pramuhardana, S.STP, M.Si</td>
                         <td>(IV/b)</td>
                         <td>100</td>
-                        <td>Laporan.pdf</td>
-                        <td><button type="button" class="btn" style="background-color: #FFCF3A;">Generate Data</button>
+                        <td>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                    viewBox="0 0 24 24" width="24px" fill="#000000">
+                                    <g>
+                                        <path d="M0,0h24v24H0V0z" fill="none" />
+                                        <path
+                                            d="M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z" />
+                                    </g>
+                                </svg>
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                                    style="max-width: 90%;">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Detail Penilaian Kinerja</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="padding: 2%;">
+                                            <table class="table text-center"
+                                                style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: -4px;">
+                                                <thead>
+                                                    <tr style="background-color: #FFB500;">
+                                                        <th class="col-1">No</th>
+                                                        <th class="col-6">Kriteria</th>
+                                                        <th class="col-1">1</th>
+                                                        <th class="col-1">2</th>
+                                                        <th class="col-1">3</th>
+                                                        <th class="col-1">4</th>
+                                                        <th class="col-1">5</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Disiplin</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Tanggung Jawab</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Teamwork</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Planning Skills</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Leadership</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Problem Solving and Decision Taking Skills</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Kepatuhan</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Kejujuran</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -117,8 +225,124 @@
                         <td>Desy Herawati, S.E, Ak, M.Si</td>
                         <td>(IV/c)</td>
                         <td>50</td>
-                        <td>Laporan.pdf</td>
-                        <td><button type="button" class="btn" style="background-color: #FFCF3A;">Generate Data</button>
+                        <td>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                    viewBox="0 0 24 24" width="24px" fill="#000000">
+                                    <g>
+                                        <path d="M0,0h24v24H0V0z" fill="none" />
+                                        <path
+                                            d="M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z" />
+                                    </g>
+                                </svg>
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                                    style="max-width: 90%;">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Detail Penilaian Kinerja</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="padding: 2%;">
+                                            <table class="table text-center"
+                                                style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: -4px;">
+                                                <thead>
+                                                    <tr style="background-color: #FFB500;">
+                                                        <th class="col-1">No</th>
+                                                        <th class="col-6">Kriteria</th>
+                                                        <th class="col-1">1</th>
+                                                        <th class="col-1">2</th>
+                                                        <th class="col-1">3</th>
+                                                        <th class="col-1">4</th>
+                                                        <th class="col-1">5</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Disiplin</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Tanggung Jawab</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Teamwork</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Planning Skills</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Leadership</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Problem Solving and Decision Taking Skills</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Kepatuhan</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Kejujuran</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
@@ -135,6 +359,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>
