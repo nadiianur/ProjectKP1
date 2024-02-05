@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  font-family: 'Poppins';
+}
+
+.main{
+    background: linear-gradient(180deg, #DFFFD0 1.5%, #91BBFD 92.13%);
+    background-repeat: no-repeat;
+    padding: 2%;
+    overflow-x: hidden;
+}
+
+.card{
+    height: 100%;
+    border-radius: 10px;
+    padding: 4%;
+}
