@@ -64,41 +64,55 @@
             </div>
         </div>
 
-        <div style="background: linear-gradient(180deg, #7ABDFF 1.5%, #BAFFD9 92.13%); margin: -2%; height: 50rem; border-top-right-radius: 24px; border-top-left-radius: 24px;">
-            <div class="flex-column align-items-center justify-content-center"
-                style="margin: 4% 24% 0 24%;">
+        <div
+            style="background: linear-gradient(180deg, #7ABDFF 1.5%, #BAFFD9 92.13%); margin: -2%; height: 50rem; border-top-right-radius: 24px; border-top-left-radius: 24px;">
+            <div class="flex-column align-items-center justify-content-center" style="margin: 4% 24% 0 24%;">
                 <form id="updateprofile">
                     <div class="mb-3">
-                        <label for="nip" class="form-label mt-5">NIP</label>
-                        <input type="text" class="form-control" id="nip" aria-describedby="textlHelp">
+                        <label for="nip" class="form-label mt-5 fw-bold">NIP</label>
+                        <input type="text" class="form-control" id="nip" style="border-radius: 12px;">
                     </div>
                     <div class="mb-3">
-                        <label for="nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="nama" aria-describedby="textlHelp">
+                        <label for="nama" class="form-label fw-bold">Nama</label>
+                        <input type="text" class="form-control" id="nama" style="border-radius: 12px;">
                     </div>
                     <div class="mb-3">
-                        <label for="golongan" class="form-label">Golongan</label>
-                        <input type="text" class="form-control" id="golongan" aria-describedby="textlHelp">
+                        <label for="golongan" class="form-label fw-bold">Golongan</label>
+                        <input type="text" class="form-control" id="golongan" style="border-radius: 12px;">
                     </div>
                     <div class="mb-3">
-                        <label for="jabatan" class="form-label">Jabatan</label>
-                        <input type="text" class="form-control" id="jabatan" aria-describedby="textlHelp">
+                        <label for="jabatan" class="form-label fw-bold">Jabatan</label>
+                        <select id="jabatan" class="form-select" aria-label="Default select example" style="border-radius: 12px;">
+                            <option selected>Pilih Golongan</option>
+                            <option value="IV/c">IV/c</option>
+                            <option value="IV/b">IV/b</option>
+                            <option value="IV/a">IV/a</option>
+                            <option value="III/c">III/c</option>
+                            <option value="III/b">III/b</option>
+                            <option value="III/a">III/a</option>
+                            <option value="">-</option>
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <label for="email" class="form-label fw-bold">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                            style="border-radius: 12px;">
                     </div>
                     <div class="mb-3">
-                        <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                        <input type="text" class="form-control" id="jenis_kelamin" aria-describedby="textlHelp">
+                        <label for="jenis_kelamin" class="form-label fw-bold">Jenis Kelamin</label>
+                        <select id="jenis_kelamin" class="form-select" aria-label="Default select example" style="border-radius: 12px;">
+                            <option selected>Pilih Jenis Kelamin</option>
+                            <option value="Perempuan">Perempuan</option>
+                            <option value="Laki - laki">Laki - laki</option>
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <label for="oldpassword" class="form-label">Old Password</label>
-                        <input type="password" class="form-control" id="oldpassword">
+                        <label for="oldpassword" class="form-label fw-bold">Old Password</label>
+                        <input type="password" class="form-control" id="oldpassword" style="border-radius: 12px;">
                     </div>
                     <div class="mb-3">
-                        <label for="newpassword" class="form-label">New Password</label>
-                        <input type="password" class="form-control" id="newpassword">
+                        <label for="newpassword" class="form-label fw-bold">New Password</label>
+                        <input type="password" class="form-control" id="newpassword" style="border-radius: 12px;">
                     </div>
                     <button type="submit" class="btn btn-primary mt-4 d-flex justify-content-center mx-auto"
                         style="background: #488DF8; align-items: center; border-radius: 30px;">Save</button>
