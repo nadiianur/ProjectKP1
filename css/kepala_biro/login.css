@@ -1,113 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-
-html, body {
-  height: 100%;
-  margin: 0;
-}
-body{
-    font-family: 'Poppins', sans-serif;
-    background: #F9FAFC;
+html,
+body {
+    height: 100%;
     margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    background: linear-gradient(180deg, #8CB9FF 1.5%, #DFFFD0 92.13%);
+    overflow-x: hidden;
 }
 
 .container {
     padding: 0;
 }
 
-/*------------ Right box ------------*/
-
-.right-box{
-    padding: 60px 80px 40px 80px;
+.card-login {
+    padding: 4% 4% 12% 4%;
+    background: #F0FFFD;
+    border-radius: 32px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.364);
+    width: 75%;
+    margin-left: 2rem;
 }
 
-/*------------ Custom Placeholder ------------*/
-
-::placeholder{
-    font-size: 16px;
-    font-weight: 500;
-    color: #A8AFBA;
+.title {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 3.2px;
+    padding: 0 8% 0 8%;
+    text-shadow: 0 6px 10px rgba(0, 0, 0, 0.364);
 }
 
-.rounded-4{
+.form-control {
+    background-color: #EBEBEB;
     border-radius: 20px;
+    border-color: #EBEBEB;
 }
-.rounded-5{
+
+.btn-lg {
+    background-color: #FA5F00;
     border-radius: 30px;
-}
-
-
-/*------------ For small screens------------*/
-
-@media (max-width: 767px) {
-    .container-fluid {
-        display: block;
-    }
-
-    .left-box {
-        overflow: hidden;
-        margin-left: -10px;
-    }
-
-    .right-box {
-        width: 60%;
-        padding: 30px 20px;
-    }
-
-    .featured-image {
-        text-align: center;
-    }
-
-    .input-group {
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .container-fluid {
-        width: 50%;
-        display: block;
-    }
-
-    .left-box {
-        margin-left: -250px;
-    }
-
-    .right-box {
-        padding: 20px;
-        width: 70%;
-    }
-
-    .featured-image {
-        text-align: center;
-    }
-
-    .input-group {
-        width: 100%;
-    }
-}
-
-
-@media (min-width: 992px) and (max-width:1124px) {
-    .container-fluid {
-        width: 50%;
-        display: block;
-    }
-
-    .left-box {
-        overflow: hidden;
-        margin-left: -250px;
-    }
-
-    .right-box {
-        padding: 20px;
-        width: 70%;
-    }
-
-    .featured-image {
-        text-align: center;
-    }
-
-    .input-group {
-        width: 100%;
-    }
+    color: white;
+    width: 100px;
+    font-weight: 800;
+    margin-top: 4%;
 }

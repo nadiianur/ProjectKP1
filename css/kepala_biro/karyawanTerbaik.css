@@ -1,29 +1,25 @@
-.navbar-brand {
-    color: #000;
-    font-family: 'Poppins';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    display: flex;
-    align-items: center;
-
+.navbar {
+    background: linear-gradient(307deg, rgba(188, 255, 187, 1) 13%, rgba(58, 134, 255, 1) 100%);
 }
 
-.navbar-nav {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.navbar-nav .nav-item {
-    margin-bottom: 8px;
+.nav-title {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Open Sans Condensed';
+    color: white;
+    margin-right: auto;
+    letter-spacing: 2px;
 }
 
 .dropdown-menu {
     right: 0;
     left: auto;
+    background: linear-gradient(180deg, #6CAFFF 0%, #FFFF 100%);
+}
 
-    background: linear-gradient(180deg, #6CAFFF 0%, rgba(217, 217, 217, 0.00) 100%);
+main {
+    padding: 4%;
+    margin-top: -24px;
 }
 
 .konten {
@@ -38,6 +34,8 @@
 .table {
     margin-top: 5%;
     border-collapse: collapse;
-    /* Atur agar border terlihat rapi */
-    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 88%;
+    border-radius: 10px;
+    text-align: center;
 }

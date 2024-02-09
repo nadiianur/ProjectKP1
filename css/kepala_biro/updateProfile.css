@@ -1,28 +1,35 @@
-.navbar-brand {
-    color: #000;
-    font-family: 'Poppins';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    display: flex;
-    align-items: center;
-
+.navbar {
+    background: linear-gradient(307deg, rgba(188, 255, 187, 1) 13%, rgba(58, 134, 255, 1) 100%);
 }
 
-.navbar-nav {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.navbar-nav .nav-item {
-    margin-bottom: 8px;
+.nav-title {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Open Sans Condensed';
+    color: white;
+    margin-right: auto;
+    letter-spacing: 2px;
 }
 
 .dropdown-menu {
     right: 0;
     left: auto;
-    background: linear-gradient(180deg, #6CAFFF 0%, rgba(217, 217, 217, 0.00) 100%);
+    background: linear-gradient(180deg, #6CAFFF 0%, #FFFF 100%);
+}
+
+main {
+    padding: 4%;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.sub-title {
+    font-size: 1.3rem;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .konten {
@@ -31,41 +38,40 @@
     font-style: normal;
 }
 
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.fotoprofil {
-    margin-left: 10%;
-}
-
-.nameKep {
-    text-align: center;
+.main-container {
+    grid-area: main;
+    display: flex;
     justify-content: center;
-    color: #000;
-    font-family: 'Poppins';
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin-bottom: 16px;
+    align-items: center;
+    padding: 2% 4% 0 4%;
 }
 
-
-
-/* Gaya dropdown saat hover */
-.custom-dropdown option {
-    background: #B4B2B3
+.form-select {
+    background-color: #EBEBEB;
+    border-radius: 8px;
+    width: 100%;
 }
-label{
-    color: black;
-    font-weight:400;
+
+.in-profile{
+    border-radius: 8px; 
+    background: #EBEBEB;
 }
-.btn{
-    margin-left: 100%;
-    background-color: #FA6301;
-    color: white;
+
+.profile{
+    width: 60%; 
+    height: 60%;
+    z-index: 10; 
+    max-width: 60%;
+    max-height: 60%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover; 
+}
+
+.save{
+    border-radius: 8px; 
+    background: #FA6301; 
+    color: white; 
+    font-weight: 500; 
+    width: 20%; 
+    text-align: center;
 }
